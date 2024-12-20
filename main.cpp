@@ -1,6 +1,10 @@
 #include <Novice.h>
 
-const char kWindowTitle[] = "PG3";
+#include "Player.h"
+#include "InputHandler.h"
+#include "ICommand.h"
+
+const char kWindowTitle[] = "PG3_05_01";
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
@@ -11,6 +15,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	// キー入力結果を受け取る箱
 	char keys[256] = {0};
 	char preKeys[256] = {0};
+
+	Player player;
+	ICommand<Player>* command;
+	InputHandler inputHandler;
+
+	inputHandler.assign_move_left_command();
+	inputHandler.assign_move_right_command();
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -25,6 +36,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓更新処理ここから
 		///
 
+		command = inputHandler.handle_input();
+		if (command) {
+			command->Exec(player);
+		}
+
+		player.update();
+
 		///
 		/// ↑更新処理ここまで
 		///
@@ -32,6 +50,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓描画処理ここから
 		///
+
+		player.draw();
 
 		///
 		/// ↑描画処理ここまで
