@@ -61,7 +61,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\KamataEngine\Adapter;C:\KamataEngine\External\imgui;C:\KamataEngine\External\KamataEngine\include;C:\KamataEngine\External\DirectXTex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\KamataEngine\Adapter;C:\KamataEngine\External\imgui;C:\KamataEngine\External\KamataEngine\include;C:\KamataEngine\External\DirectXTex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <TreatWarningAsError>true</TreatWarningAsError>
@@ -86,7 +86,7 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\KamataEngine\Adapter;C:\KamataEngine\External\KamataEngine\include;C:\KamataEngine\External\DirectXTex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\KamataEngine\Adapter;C:\KamataEngine\External\KamataEngine\include;C:\KamataEngine\External\DirectXTex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <Optimization>MinSpace</Optimization>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -108,11 +108,28 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game\Bullet.cpp" />
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp" />
+    <ClCompile Include="Scene\Result.cpp" />
+    <ClCompile Include="Scene\Game.cpp" />
+    <ClCompile Include="Game\Enemy.cpp" />
+    <ClCompile Include="Game\Entity.cpp" />
+    <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MathLib\Color3.cpp" />
+    <ClCompile Include="MathLib\Color4.cpp" />
+    <ClCompile Include="MathLib\Matrix3x3.cpp" />
+    <ClCompile Include="MathLib\Matrix4x4.cpp" />
+    <ClCompile Include="MathLib\Transform2D.cpp" />
+    <ClCompile Include="MathLib\Vector2.cpp" />
+    <ClCompile Include="MathLib\Vector3.cpp" />
+    <ClCompile Include="MathLib\VectorConverter.cpp" />
+    <ClCompile Include="Scene\SceneManager.cpp" />
+    <ClCompile Include="Scene\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\DirectXGame\3d\Camera.h" />
+    <ClInclude Include="Game\Bullet.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\base\StringUtility.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\math\Matrix4x4.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\math\Vector2.h" />
@@ -139,6 +156,25 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="C:\KamataEngine\DirectXGame\input\Input.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\scene\GameScene.h" />
     <ClInclude Include="C:\KamataEngine\Adapter\Novice.h" />
+    <ClInclude Include="Scene\Result.h" />
+    <ClInclude Include="Scene\Game.h" />
+    <ClInclude Include="Game\Enemy.h" />
+    <ClInclude Include="Game\Entity.h" />
+    <ClInclude Include="Game\Player.h" />
+    <ClInclude Include="MathLib\Array2D.h" />
+    <ClInclude Include="MathLib\Color3.h" />
+    <ClInclude Include="MathLib\Color4.h" />
+    <ClInclude Include="MathLib\Definition.h" />
+    <ClInclude Include="MathLib\Matrix.h" />
+    <ClInclude Include="MathLib\Matrix3x3.h" />
+    <ClInclude Include="MathLib\Matrix4x4.h" />
+    <ClInclude Include="MathLib\Transform2D.h" />
+    <ClInclude Include="MathLib\Vector2.h" />
+    <ClInclude Include="MathLib\Vector3.h" />
+    <ClInclude Include="MathLib\VectorConverter.h" />
+    <ClInclude Include="Scene\IScene.h" />
+    <ClInclude Include="Scene\SceneManager.h" />
+    <ClInclude Include="Scene\Title.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

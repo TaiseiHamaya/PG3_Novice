@@ -20,6 +20,54 @@
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp">
       <Filter>KamataEngine\Adapter</Filter>
     </ClCompile>
+    <ClCompile Include="Game\Bullet.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\Game.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Entity.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathLib\Color3.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathLib\Color4.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathLib\Matrix3x3.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathLib\Matrix4x4.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathLib\Transform2D.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathLib\Vector2.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathLib\Vector3.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MathLib\VectorConverter.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\SceneManager.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\Title.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\Result.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\KamataEngine\DirectXGame\audio\Audio.h">
@@ -103,5 +151,25 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
+    <ClInclude Include="Game\Bullet.h" />
+    <ClInclude Include="Scene\Game.h" />
+    <ClInclude Include="Game\Enemy.h" />
+    <ClInclude Include="Game\Entity.h" />
+    <ClInclude Include="Game\Player.h" />
+    <ClInclude Include="MathLib\Array2D.h" />
+    <ClInclude Include="MathLib\Color3.h" />
+    <ClInclude Include="MathLib\Color4.h" />
+    <ClInclude Include="MathLib\Definition.h" />
+    <ClInclude Include="MathLib\Matrix.h" />
+    <ClInclude Include="MathLib\Matrix3x3.h" />
+    <ClInclude Include="MathLib\Matrix4x4.h" />
+    <ClInclude Include="MathLib\Transform2D.h" />
+    <ClInclude Include="MathLib\Vector2.h" />
+    <ClInclude Include="MathLib\Vector3.h" />
+    <ClInclude Include="MathLib\VectorConverter.h" />
+    <ClInclude Include="Scene\IScene.h" />
+    <ClInclude Include="Scene\SceneManager.h" />
+    <ClInclude Include="Scene\Title.h" />
+    <ClInclude Include="Scene\Result.h" />
   </ItemGroup>
 </Project>
